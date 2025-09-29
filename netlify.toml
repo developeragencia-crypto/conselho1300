@@ -3,9 +3,9 @@
 
 [build]
   command = "npm run build"
-  publish = ""
+  # publish removido para Remix
 
 [build.environment]
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+package = "@netlify/remix-run-plugin"
