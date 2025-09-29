@@ -1,0 +1,1 @@
+import{b as f,c as r,d,e as h,m as R}from"/build/_shared/chunk-GUUIGM6P.js";var m=f(o=>{"use strict";var y=h();o.createRoot=y.createRoot,o.hydrateRoot=y.hydrateRoot;var C});var t=r(d(),1),E=r(m(),1);(0,t.startTransition)(()=>{(0,E.hydrateRoot)(document,<t.StrictMode><R/></t.StrictMode>)});
