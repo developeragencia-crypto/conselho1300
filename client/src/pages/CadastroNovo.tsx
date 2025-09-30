@@ -113,12 +113,22 @@ export default function CadastroNovo() {
         body: JSON.stringify(registerData)
       });
 
-      const result = await response.json();
+      let result;
+      try {
+        const contentType = response.headers.get('content-type');
+        if (contentType && contentType.includes('application/json')) {
+          result = await response.json();
+        } else {
+          throw new Error('Resposta da API não é JSON');
+        }
+      } catch (err) {
+        throw new Error('Erro ao processar resposta da API');
+      }
 
       if (response.ok && result.success) {
         setStep(4);
       } else {
-        throw new Error(result.message || 'Erro no cadastro');
+        throw new Error(result.message || result.error || 'Erro no cadastro');
       }
     } catch (err: any) {
       console.error('Erro no cadastro:', err);
