@@ -94,6 +94,7 @@
     "zustand": "^5.0.5"
   },
   "devDependencies": {
+    "@netlify/remix-run-plugin": "^5.0.0",
     "@remix-run/dev": "^2.17.1",
     "@replit/vite-plugin-cartographer": "^0.2.4",
     "@replit/vite-plugin-runtime-error-modal": "^0.0.3",
